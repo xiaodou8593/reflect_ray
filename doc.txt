@@ -24,3 +24,8 @@ function reflect_ray:_init
 # 输入数据模板, 坐标, 朝向生成激光
 data modify storage reflect_ray:io input set from storage reflect_ray:class example
 execute positioned 0.0 0.0 0.0 rotated 0.0 0.0 run function reflect_ray:_new
+
+
+# 安全性
+	维度 false
+	区块 true

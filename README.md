@@ -32,3 +32,10 @@ function reflect_ray:_init
 data modify storage reflect_ray:io input set from storage reflect_ray:class example
 execute positioned 0.0 0.0 0.0 rotated 0.0 0.0 run function reflect_ray:_new
 ```
+
+
+# 安全性
+
+维度 false
+
+区块 true
