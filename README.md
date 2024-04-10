@@ -6,9 +6,7 @@
 	duration:100,
 	step:0.01d
 }
-```
 
-```
 particle: string
 	控制激光的粒子
 
