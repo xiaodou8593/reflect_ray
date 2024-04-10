@@ -1,0 +1,21 @@
+scoreboard players set sstempx int -1
+execute if score x int matches 1.. run scoreboard players set sstempx int 1
+execute if score x int matches ..-1 run scoreboard players operation x int *= -1 int
+scoreboard players set sstempy int -1
+execute if score y int matches 1.. run scoreboard players set sstempy int 1
+execute if score y int matches ..-1 run scoreboard players operation y int *= -1 int
+scoreboard players set sstempz int -1
+execute if score z int matches 1.. run scoreboard players set sstempz int 1
+execute if score z int matches ..-1 run scoreboard players operation z int *= -1 int
+scoreboard players operation sstemp int = y int
+scoreboard players operation sstemp int -= x int
+execute if score sstemp int matches -1..1 run scoreboard players operation y int = x int
+scoreboard players operation sstemp int = z int
+scoreboard players operation sstemp int -= x int
+execute if score sstemp int matches -1..1 run scoreboard players operation z int = x int
+scoreboard players operation sstemp int = z int
+scoreboard players operation sstemp int -= y int
+execute if score sstemp int matches -1..1 run scoreboard players operation z int = y int
+scoreboard players operation x int *= sstempx int
+scoreboard players operation y int *= sstempy int
+scoreboard players operation z int *= sstempz int
